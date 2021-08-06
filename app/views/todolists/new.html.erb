@@ -1,4 +1,4 @@
-<%= form_with model:@list,url:'/todolist',local:true do |f| %>
+<%= form_with model:@list,url: todolists_path,local:true do |f| %>
 <div>
     <label>タイトル</label>
     <%= f.text_field:title %>

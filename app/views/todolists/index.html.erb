@@ -1,0 +1,14 @@
+<%= link_to "投稿", new_todolist_path %>
+<h1>一覧</h1>
+<% @lists.each do |list| %>
+<table>
+    <tr>
+        <th>タイトル</th>
+        <td><%= link_to list.title,todolist_path(list.id) %></td>
+    </tr>
+    <tr>
+        <th>本文</th>
+        <td><%= list.body %></td>
+    </tr>
+</table>
+<% end %>
