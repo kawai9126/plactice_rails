@@ -1,0 +1,13 @@
+<%= form_with model:@list,url:'/todolist',local:true do |f| %>
+<div>
+    <label>タイトル</label>
+    <%= f.text_field:title %>
+</div>
+<div>
+    <label>本文</label>
+    <%= f.text_area:body %>
+</div>
+<div>
+    <%= f.submit "投稿" %>
+</div>
+<% end %>
