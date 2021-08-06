@@ -1,6 +1,10 @@
 <h1>詳細</h1>
 <table>
     <tr>
+        <th>画像</th>
+        <td><%= attachment_image_tag @list,:image,size: '100x100' %></td>
+    </tr>
+    <tr>
         <th>タイトル</th>
         <td><%= @list.title %></td>
     </tr>
@@ -9,3 +13,4 @@
         <td><%= @list.body %></td>
     </tr>
 </table>
+<%= link_to '編集', edit_todolist_path(@list.id) %>

@@ -3,12 +3,19 @@
 <% @lists.each do |list| %>
 <table>
     <tr>
+        <th>画像</th>
+        <%= attachment_image_tag list,:image,size: '100x100' %>
+    </tr>
+    <tr>
         <th>タイトル</th>
         <td><%= link_to list.title,todolist_path(list.id) %></td>
     </tr>
     <tr>
         <th>本文</th>
         <td><%= list.body %></td>
+    </tr>
+    <tr>
+        <th></th>
     </tr>
 </table>
 <% end %>

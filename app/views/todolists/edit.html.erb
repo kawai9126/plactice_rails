@@ -1,6 +1,7 @@
-<%= form_with model:@list,url: todolists_path,local:true do |f| %>
+<h1>編集</h1>
+<%= form_with model:@list,url: todolist_path(@list.id),local:true do |f| %>
 <div>
-    <label>画像</label>
+    <lable>画像</lable>
     <%= f.attachment_field:image %>
 </div>
 <div>
@@ -12,6 +13,6 @@
     <%= f.text_area:body %>
 </div>
 <div>
-    <%= f.submit "投稿" %>
+    <%= f.submit "更新" %>
 </div>
 <% end %>
