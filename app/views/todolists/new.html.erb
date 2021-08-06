@@ -1,3 +1,9 @@
+<% if @list.errors.any? %>
+  <%= @list.errors.count %>件のエラーが発生しました
+  <% @list.errors.full_messages.each do |message| %>
+    <%= message %>
+  <% end %>
+<% end %>
 <%= form_with model:@list,url: todolists_path,local:true do |f| %>
 <div>
     <label>画像</label>
